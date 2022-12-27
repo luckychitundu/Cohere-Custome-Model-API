@@ -1,0 +1,9 @@
+import cohere
+from cohere.classify import Example
+
+co = cohere.Client('Dh4DlGvCzp8eBiaX4RJ8Hqib67Dukv9Tfqb8XcXj') #This is your trial API key
+response = co.classify(
+  model='ad5cba24-8c93-4d4c-b6f9-fce4daad67fb-ft',
+  inputs=["<YOUR_INPUTS>"])
+
+print('The confidence levels of the labels are: {}'.format(response.classifications))
